@@ -1,0 +1,27 @@
+{
+  "name": "spotify-data-analysis",
+  "version": "1.0.0",
+  "description": "Lets Spotify Users look at listening data for themselves",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix client",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "proxy": "http://localhost:5000",
+  "author": "MN",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "query-string": "^6.12.1",
+    "randomstring": "^1.1.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
